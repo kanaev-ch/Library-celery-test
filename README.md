@@ -80,4 +80,5 @@ flower 0.9.7
 
 ```
 kanaev-ch@yandex.ru
+kanaev.ch@gmail.com
 ```

@@ -15,7 +15,7 @@ class User(AbstractUser):
         unique=True,
         blank=False,
     )
-    pub_date = models.DateTimeField(
+    signup_date = models.DateTimeField(
         auto_now_add=True,
         verbose_name='Дата регистрации'
     )
@@ -25,4 +25,4 @@ class User(AbstractUser):
     class Meta:
         verbose_name = 'Пользователь'
         verbose_name_plural = 'Пользователи'
-        ordering = ['-pub_date']
+        ordering = ['-signup_date']

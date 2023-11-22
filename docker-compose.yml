@@ -33,7 +33,7 @@ services:
 
   celery:
     build: ./library
-    command: celery worker --app=library --loglevel=info --logfile=logs/celery.log
+    command: celery worker --app=library --loglevel=info
     volumes:
       - ./library:/usr/src/app
     env_file: ./library/.env

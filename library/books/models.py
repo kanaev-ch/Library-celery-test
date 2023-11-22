@@ -14,8 +14,7 @@ class Books(models.Model):
     )
     pub_date = models.DateField(
         verbose_name='Дата публикации',
-        help_text='Укажите дату публикации книги',
-        auto_now_add=True,
+        help_text='Укажите дату публикации книги'
     )
     isbn = models.PositiveBigIntegerField(
         verbose_name='ISBN книги',

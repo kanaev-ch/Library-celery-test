@@ -19,18 +19,8 @@ class UserSerializer(serializers.ModelSerializer):
         model = User
         fields = ('id', 'email', 'username', 'signup_date')
 
-    # def send_email(self, email):
-    #     send_mail(
-    #         'Поздравление',
-    #         'Поздравляем с успешной решистрацией на сайте!)',
-    #         'info@book.com',
-    #         [email],
-    #         fail_silently=False,
-    #     )
-
     def create(self, validated_data):
         email = self.initial_data['email']
-        # self.send_email(email)
         send_email.delay(email)
         user = User.objects.create(**validated_data)
         return user
